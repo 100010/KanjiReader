@@ -35,7 +35,7 @@ module KanjiConvertor
       xml_doc  = Nokogiri::XML(xml).remove_namespaces!
 
       @kanji     = xml_doc.xpath(base_path + '//Surface').text
-      @hiragana = xml_doc.xpath(base_path + '//Furigana').text
+      @hiragana  = xml_doc.xpath(base_path + '//Furigana').text
       @roma      = xml_doc.xpath(base_path + '//Roman').text
     end
 
