@@ -1,15 +1,13 @@
 # KanjiConvertor
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/KanjiConvertor`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+KanjiConvertor allows you to read part of word written in Kanji with ruby
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'KanjiConvertor'
+echo "gem 'KanjiConvertor'" >> Gemfile && bundle
 ```
 
 And then execute:
@@ -22,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First, you have to get application_id to use yahoo api.
+you can get it from [here](https://e.developer.yahoo.co.jp/register)
+
+after you get application_id from website, you can use like
+
+```ruby
+str = KanjiConvertor::Perform.new(YOUR_APPLICATION_ID, "漢字")
+str.kanji #=> "漢字"
+str.roman #=> "kanzi"
+str.hiragana #=> 'かんじ'
+str.katakana #=> 'カンジ'
+```
+
 
 ## Development
 
@@ -38,4 +48,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
