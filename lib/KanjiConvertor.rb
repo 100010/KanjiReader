@@ -44,9 +44,3 @@ module KanjiConvertor
     end
   end
 end
-
-
-
-# KanjiConvertor::Perform.new("dj0zaiZpPTlNNGpabE5tN3paQiZzPWNvbnN1bWVyc2VjcmV0Jng9N2Q-", "漢字", grade: :basic)
-#
-#
