@@ -6,22 +6,14 @@ require 'faraday'
 require 'nokogiri'
 
 module KanjiReader
-  GRADE_HASH = {
-    easy: 0,
-    basic: 1,
-    hard: 2
-  }.freeze
-
-
   class Perform
 
     attr_accessor :application_id, :uri, :kanji, :hiragana, :grade, :roma
 
     def initialize(application_id, kanji, options={})
       @application_id = application_id
-      grade = GRADE_HASH[:basic] if GRADE_HASH[options[:grade]]
 
-      @uri = URI.escape "https://jlp.yahooapis.jp/FuriganaService/V1/furigana?appid=#{application_id}&grade=#{grade}&sentence=#{kanji}"
+      @uri = URI.escape "https://jlp.yahooapis.jp/FuriganaService/V1/furigana?appid=#{application_id}&sentence=#{kanji}"
 
       conn = Faraday::Connection.new(:url => uri) do |builder|
         builder.use Faraday::Request::UrlEncoded

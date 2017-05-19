@@ -26,11 +26,11 @@ you can get it from [here](https://e.developer.yahoo.co.jp/register)
 after you get application_id from website, you can use like
 
 ```ruby
-str = KanjiReader::Perform.new(YOUR_APPLICATION_ID, "漢字")
-str.kanji #=> "漢字"
-str.roman #=> "kanzi"
-str.hiragana #=> 'かんじ'
-str.katakana #=> 'カンジ'
+str = KanjiReader::Perform.new(YOUR_APPLICATION_ID, "翻車魚")
+str.kanji #=> "翻車魚"
+str.roman #=> "manbou"
+str.hiragana #=> 'まんぼう'
+str.katakana #=> 'マンボウ'
 ```
 
 
