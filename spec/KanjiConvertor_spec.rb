@@ -1,8 +1,8 @@
 require "spec_helper"
 
-RSpec.describe KanjiConvertor do
+RSpec.describe KanjiReader do
   it "has a version number" do
-    expect(KanjiConvertor::VERSION).not_to be nil
+    expect(KanjiReader::VERSION).not_to be nil
   end
 
   it "does something useful" do

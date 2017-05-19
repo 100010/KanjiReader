@@ -1,13 +1,13 @@
-# KanjiConvertor
+# KanjiReader
 
-KanjiConvertor allows you to read part of word written in Kanji with ruby
+KanjiReader allows you to read part of word written in Kanji with ruby
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-echo "gem 'KanjiConvertor'" >> Gemfile && bundle
+echo "gem 'KanjiReader'" >> Gemfile && bundle
 ```
 
 And then execute:
@@ -16,7 +16,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install KanjiConvertor
+    $ gem install KanjiReader
 
 ## Usage
 
@@ -26,7 +26,7 @@ you can get it from [here](https://e.developer.yahoo.co.jp/register)
 after you get application_id from website, you can use like
 
 ```ruby
-str = KanjiConvertor::Perform.new(YOUR_APPLICATION_ID, "漢字")
+str = KanjiReader::Perform.new(YOUR_APPLICATION_ID, "漢字")
 str.kanji #=> "漢字"
 str.roman #=> "kanzi"
 str.hiragana #=> 'かんじ'
@@ -42,7 +42,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/KanjiConvertor. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/KanjiReader. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License

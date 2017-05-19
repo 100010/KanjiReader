@@ -1,11 +1,11 @@
-require "KanjiConvertor/version"
+require "KanjiReader/version"
 require 'rexml/document'
 require 'nkf'
 require 'uri'
 require 'faraday'
 require 'nokogiri'
 
-module KanjiConvertor
+module KanjiReader
   GRADE_HASH = {
     easy: 0,
     basic: 1,
