@@ -10,10 +10,6 @@ Add this line to your application's Gemfile:
 echo "gem 'KanjiReader'" >> Gemfile && bundle
 ```
 
-And then execute:
-
-    $ bundle
-
 Or install it yourself as:
 
     $ gem install KanjiReader
@@ -26,11 +22,12 @@ you can get it from [here](https://e.developer.yahoo.co.jp/register)
 after you get application_id from website, you can use like
 
 ```ruby
-str = KanjiReader::Perform.new(YOUR_APPLICATION_ID, "翻車魚")
-str.kanji #=> "翻車魚"
-str.roman #=> "manbou"
-str.hiragana #=> 'まんぼう'
-str.katakana #=> 'マンボウ'
+client = KanjiReader::Client.new(YOUR_APPLICATION_ID)
+client.perform("翻車魚")
+client.kanji #=> "翻車魚"
+client.roman #=> "manbou"
+client.hiragana #=> 'まんぼう'
+client.katakana #=> 'マンボウ'
 ```
 
 
