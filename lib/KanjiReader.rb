@@ -1,4 +1,4 @@
-require "KanjiReader/version"
+require 'KanjiReader/version'
 require 'rexml/document'
 require 'nkf'
 require 'uri'
@@ -27,7 +27,7 @@ module KanjiReader
     end
 
     def conn
-      Faraday::Connection.new(url: uri) do |builder|
+      @conn ||= Faraday::Connection.new(url: uri) do |builder|
         builder.use Faraday::Request::UrlEncoded
         builder.use Faraday::Response::Logger
         builder.use Faraday::Adapter::NetHttp
